@@ -1,0 +1,31 @@
+GITHUB UPLOAD — SIMPLE METHOD
+
+1. Open your repository: Xin-Zhang9/Website
+2. Click "Add file"
+3. Choose "Upload files"
+4. Unzip this package on your computer.
+5. Drag these items into GitHub:
+   - index.html
+   - styles.css
+   - script.js
+   - assets folder
+6. Scroll down.
+7. In Commit changes, write:
+   Initial scientific gallery website
+8. Click "Commit changes"
+
+Do not upload the ZIP file itself.
+Upload the files inside the unzipped folder.
+
+After that:
+
+1. Open Cloudflare
+2. Workers & Pages
+3. Create
+4. Pages
+5. Connect to Git
+6. Select Xin-Zhang9/Website
+7. Framework preset: None
+8. Build command: blank
+9. Build output directory: /
+10. Deploy
