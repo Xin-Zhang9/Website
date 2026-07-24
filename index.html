@@ -11,171 +11,160 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav">
-    <a class="name" href="#top">Xin Zhang</a>
+  <header class="site-nav">
+    <a class="text-nav-name" href="#top">Xin Zhang</a>
     <nav>
-      <a href="#stories">Stories</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a class="text-nav-link" href="#work">Work</a>
+      <a class="text-nav-link" href="#about">About</a>
+      <a class="text-nav-link" href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <video autoplay muted loop playsinline class="background-video">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata">
         <source src="assets/videos/hero.mp4" type="video/mp4" />
       </video>
-      <div class="hero-fallback"></div>
-      <div class="overlay"></div>
 
-      <div class="hero-content reveal">
-        <p class="eyebrow">Research · Visualization · Storytelling</p>
-        <h1>Every experiment begins with a question.</h1>
-        <p class="intro">
+      <div class="hero-fallback"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-caption">
+        <p class="text-hero-kicker">Research · Visualization · Storytelling</p>
+        <h1 class="text-hero-title">Every experiment begins with a question.</h1>
+        <p class="text-hero-description">
           I work across bioengineering, cellular systems, quantitative imaging,
           and scientific visualization to make complex ideas visible.
         </p>
-      </div>
-
-      <a class="scroll" href="#statement">Scroll to enter</a>
-    </section>
-
-    <section id="statement" class="statement section">
-      <div class="statement-inner reveal">
-        <p class="eyebrow dark">A scientific practice</p>
-        <h2>
-          Eight years of research taught me how to ask questions.
-          <em>Visualization taught me how to help others understand the answers.</em>
-        </h2>
+        <a class="scroll-cue text-scroll-cue" href="#about">
+          Scroll to enter <span>↓</span>
+        </a>
       </div>
     </section>
 
-    <section id="stories" class="stories">
-      <article class="story story-one">
-        <video autoplay muted loop playsinline class="background-video">
-          <source src="assets/videos/story-01.mp4" type="video/mp4" />
-        </video>
-        <div class="story-fallback fallback-one"></div>
-        <div class="overlay"></div>
-        <div class="story-content reveal">
-          <p class="chapter">01 · Localized pH</p>
-          <h2>A story about electricity, fluorescence, and the chemistry surrounding a living cell.</h2>
-          <p>
-            Electrical stimulation becomes charge. Charge becomes fluorescence.
-            Fluorescence becomes a local measurement of extracellular pH.
-          </p>
-        </div>
-      </article>
-
-      <article class="story story-two">
-        <video autoplay muted loop playsinline class="background-video">
-          <source src="assets/videos/story-02.mp4" type="video/mp4" />
-        </video>
-        <div class="story-fallback fallback-two"></div>
-        <div class="overlay"></div>
-        <div class="story-content reveal">
-          <p class="chapter">02 · Calcium</p>
-          <h2>Signals moving through life.</h2>
-          <p>
-            Live-cell fluorescence reveals rapid calcium dynamics,
-            while closed-loop control asks whether a biological response can be guided in real time.
-          </p>
-        </div>
-      </article>
-
-      <article class="story story-three">
-        <video autoplay muted loop playsinline class="background-video">
-          <source src="assets/videos/story-03.mp4" type="video/mp4" />
-        </video>
-        <div class="story-fallback fallback-three"></div>
-        <div class="overlay"></div>
-        <div class="story-content reveal">
-          <p class="chapter">03 · Experimental Architecture</p>
-          <h2>Behind every biological measurement is an invisible machine.</h2>
-          <p>
-            Devices, electrodes, amplifiers, data acquisition, microscopy,
-            and code form the physical and computational architecture behind the experiment.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="selected-work section">
-      <div class="section-heading reveal">
-        <p class="eyebrow dark">Selected work</p>
-        <h2>Research made visible.</h2>
-      </div>
-
-      <div class="work-grid">
-        <article class="work-card reveal">
-          <div class="placeholder">
-            <span>Add your pH figure or animation</span>
+    <div class="page-layers">
+      <section id="about" class="overlay-panel about-panel">
+        <div class="panel-grid">
+          <div class="reveal">
+            <p class="text-section-label">About</p>
           </div>
-          <p class="tag">Scientific Figure</p>
-          <h3>Localized extracellular pH modulation and measurement</h3>
-        </article>
 
-        <article class="work-card reveal">
-          <div class="placeholder">
-            <span>Add your calcium microscopy video</span>
+          <div class="panel-copy reveal">
+            <h2 class="text-section-title">
+              Science is not only discovered. It is also communicated.
+            </h2>
+
+            <p class="text-section-body">
+              Eight years of research taught me how to ask questions.
+              Visualization taught me how to help others understand the answers.
+            </p>
+
+            <p class="text-section-body">
+              I am a Ph.D. researcher working across bioengineering, cellular biology,
+              electrochemical interfaces, quantitative imaging, biosensors, and closed-loop control.
+            </p>
+
+            <a class="panel-button text-button" href="#work">
+              Explore the work <span>→</span>
+            </a>
           </div>
-          <p class="tag">Biomedical Visualization</p>
-          <h3>Calcium dynamics and closed-loop cellular control</h3>
-        </article>
-
-        <article class="work-card reveal">
-          <div class="placeholder">
-            <span>Add your C4D device render</span>
-          </div>
-          <p class="tag">3D Visualization</p>
-          <h3>Bioelectronic devices and experimental systems</h3>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="about section">
-      <div class="about-grid">
-        <div class="portrait reveal">
-          <span>Add a portrait or studio image</span>
         </div>
-        <div class="about-copy reveal">
-          <p class="eyebrow dark">About</p>
-          <h2>Researcher, visual thinker, and maker.</h2>
-          <p>
-            I am a Ph.D. researcher at the University of Massachusetts Amherst.
-            My work spans bioengineering, cellular biology, electrochemical interfaces,
-            biosensors, quantitative imaging, and closed-loop control.
+      </section>
+
+      <section id="work" class="content-panel work-panel">
+        <div class="section-heading reveal">
+          <p class="text-section-label">Selected work</p>
+          <h2 class="text-section-title">Research made visible.</h2>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <div class="project-media">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/story-01.mp4" type="video/mp4" />
+              </video>
+              <div class="project-fallback fallback-one"></div>
+            </div>
+            <div>
+              <p class="text-card-label">01 · Localized pH</p>
+              <h3 class="text-card-title">
+                Electricity, fluorescence, and the chemistry surrounding a living cell.
+              </h3>
+              <p class="text-card-body">
+                Electrical stimulation becomes charge. Charge becomes fluorescence.
+                Fluorescence becomes a local measurement of extracellular pH.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="project-media">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/story-02.mp4" type="video/mp4" />
+              </video>
+              <div class="project-fallback fallback-two"></div>
+            </div>
+            <div>
+              <p class="text-card-label">02 · Calcium</p>
+              <h3 class="text-card-title">Signals moving through life.</h3>
+              <p class="text-card-body">
+                Live-cell fluorescence reveals calcium dynamics while closed-loop control
+                asks whether a biological response can be guided in real time.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="project-media">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/story-03.mp4" type="video/mp4" />
+              </video>
+              <div class="project-fallback fallback-three"></div>
+            </div>
+            <div>
+              <p class="text-card-label">03 · Experimental Architecture</p>
+              <h3 class="text-card-title">
+                The invisible machine behind biological measurement.
+              </h3>
+              <p class="text-card-body">
+                Devices, electrodes, amplifiers, data acquisition, microscopy,
+                and code form the architecture behind the experiment.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-panel statement-panel">
+        <div class="statement-copy reveal">
+          <p class="text-section-label">Practice</p>
+          <h2 class="text-statement">
+            I begin with the mechanism, the evidence, and the question.
+            <em>Then I shape them into something visible.</em>
+          </h2>
+        </div>
+      </section>
+
+      <section id="contact" class="content-panel contact-panel">
+        <div class="contact-copy reveal">
+          <p class="text-section-label">Contact</p>
+          <h2 class="text-contact-title">For science that needs to be seen.</h2>
+          <p class="text-contact-body">
+            Open to opportunities in scientific visualization, biomedical animation,
+            scientific illustration, research communication, and editorial work.
           </p>
-          <p>
-            I am developing a practice at the intersection of research,
-            scientific visualization, biomedical animation, and editorial communication.
-          </p>
+          <a class="text-email" href="mailto:xinzhang9797@gmail.com">
+            xinzhang9797@gmail.com
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact" class="contact section">
-      <div class="contact-inner reveal">
-        <p class="eyebrow dark">Contact</p>
-        <h2>For science that needs to be seen.</h2>
-        <p>
-          Open to opportunities in scientific visualization, biomedical animation,
-          scientific illustration, research communication, and editorial work.
-        </p>
-        <a class="email" href="mailto:xinzhang9797@gmail.com">xinzhang9797@gmail.com</a>
-        <div class="links">
-          <a href="#">LinkedIn</a>
-          <a href="#">CV</a>
-          <a href="#">Publications</a>
-        </div>
-      </div>
-    </section>
+      <footer>
+        <p class="text-footer">© <span id="year"></span> Xin Zhang</p>
+        <p class="text-footer">Research · Visualization · Storytelling</p>
+      </footer>
+    </div>
   </main>
-
-  <footer>
-    <p>© <span id="year"></span> Xin Zhang</p>
-    <p>Research · Visualization · Storytelling</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
