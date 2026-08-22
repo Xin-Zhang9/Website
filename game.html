@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Quest — Xin Zhang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+<header class="topnav">
+  <a href="index.html" class="brand">Xin Zhang</a>
+  <div class="nav-actions">
+    <button id="wrongBookNav" class="nav-btn">Wrong answers</button>
+    <button id="badgesNav" class="nav-btn">Badges</button>
+    <a href="index.html" class="nav-btn">Gallery ↗</a>
+  </div>
+</header>
+
+<main class="shell">
+  <section id="mapView" class="view active">
+    <div class="intro">
+      <p class="eyebrow">Knowledge Quest</p>
+      <h1>Learn by moving forward.</h1>
+      <p>Choose a subject and clear Level 1 → Level 2 → Level 3. Each round contains 20 questions. A score of 12 unlocks the next level.</p>
+    </div>
+
+    <div class="map-toolbar">
+      <div class="metric"><span>Current streak</span><strong><b id="homeStreak">0</b> 🔥</strong></div>
+      <div class="metric"><span>Best streak</span><strong id="bestStreak">0</strong></div>
+      <button id="historyNav" class="pill">History</button>
+    </div>
+
+    <div id="subjectMaps" class="subject-maps"></div>
+
+    <section class="mixed-zone">
+      <div>
+        <p class="eyebrow">Final zone</p>
+        <h2>Mixed Challenge</h2>
+        <p>Twenty questions drawn from all four subjects. No level restrictions.</p>
+      </div>
+      <button id="mixedStart" class="primary">Enter mixed challenge →</button>
+    </section>
+  </section>
+
+  <section id="quizView" class="view">
+    <div class="quiz-head">
+      <button id="quitQuiz" class="plain">← Map</button>
+      <div class="quiz-meta">
+        <span id="quizLabel"></span><span id="quizProgress"></span><span id="quizScore"></span><span id="quizStreak"></span>
+      </div>
+    </div>
+    <div class="progress"><i id="progressFill"></i></div>
+
+    <article class="question">
+      <p id="questionEyebrow" class="eyebrow"></p>
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+
+      <section id="learningCard" class="learning-card hidden">
+        <div id="knowledgeVisual" class="knowledge-visual"></div>
+        <div class="knowledge-copy">
+          <p class="eyebrow">Knowledge note</p>
+          <h3 id="knowledgeTitle"></h3>
+          <p id="knowledgeText"></p>
+          <div id="onlineKnowledge" class="online-knowledge">
+            <div class="online-label">Connected knowledge</div>
+            <p id="onlineKnowledgeText" class="online-text">Searching Wikipedia and Wikimedia…</p>
+            <a id="knowledgeSource" class="knowledge-source hidden" href="#" target="_blank" rel="noopener noreferrer">Open source ↗</a>
+          </div>
+          <div id="answerStatus" class="answer-status"></div>
+        </div>
+      </section>
+      <button id="nextQuestion" class="primary hidden">Next →</button>
+    </article>
+  </section>
+
+  <section id="resultView" class="view">
+    <div class="result">
+      <p class="eyebrow">Level complete</p>
+      <div class="score-orb"><span id="resultScore">0</span><small>/20</small></div>
+      <h2 id="resultTitle"></h2><p id="resultText"></p>
+      <div id="newBadges" class="new-badges"></div>
+      <div class="row-actions"><button id="resultMap" class="primary">Back to map</button><button id="resultWrong" class="pill">Review mistakes</button></div>
+    </div>
+  </section>
+
+  <section id="wrongView" class="view">
+    <div class="section-head"><div><p class="eyebrow">Wrong-answer book</p><h2>Learn from mistakes.</h2></div><button class="plain backMap">← Map</button></div>
+    <div id="wrongList" class="review-list"></div>
+  </section>
+
+  <section id="historyView" class="view">
+    <div class="section-head"><div><p class="eyebrow">History</p><h2>Your rounds.</h2></div><button class="plain backMap">← Map</button></div>
+    <div id="historyList" class="review-list"></div>
+  </section>
+
+  <section id="badgesView" class="view">
+    <div class="section-head"><div><p class="eyebrow">Achievements</p><h2>Badge cabinet.</h2></div><button class="plain backMap">← Map</button></div>
+    <div id="badgeGrid" class="badge-grid"></div>
+  </section>
+</main>
+
+<footer>Knowledge Quest · Xin Zhang</footer>
+<script src="questions.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
